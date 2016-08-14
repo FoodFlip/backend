@@ -34,6 +34,7 @@ app.get('/factualInfos', function(req, serverResponse) {
 
   factual.get('/t/restaurants-us',factualOptions, function (error, res) {
     if (error) {
+      console.log(error);
       serverResponse.status(500).send("Error: " + error.message);
       return;
     }
