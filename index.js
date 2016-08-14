@@ -33,6 +33,11 @@ app.get('/factualInfos', function(req, serverResponse) {
   }
 
   factual.get('/t/restaurants-us',factualOptions, function (error, res) {
+    if (error) {
+      serverResponse.status(500).send("Error: " + error.message);
+      return;
+    }
+
     var deviceTime = new Date(timestamp);
     console.log(deviceTime);
     var openRestaurants = returnOpenRestaurants(res.data, deviceTime);
