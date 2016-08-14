@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/rainbow-unicorns/backend#readme",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "factual-api": "^1.0.7",
+    "moment": "^2.14.1"
   }
 }
